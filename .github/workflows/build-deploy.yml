@@ -15,5 +15,11 @@ jobs:
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
-      - name: say hi to santiago
-        run: echo "Hola"
+      - name: install python 3.9
+        uses: actions/setup-python@v2
+        with: 
+          python-version: '3.9'
+      - name:  udpate pip
+        run: python -m pip install --upgrade pip
+      - name: install all dependencies
+        run: pip install -r requirements.txt
