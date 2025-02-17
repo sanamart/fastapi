@@ -6,8 +6,11 @@ from . import models
 from .database import SessionLocal, engine, get_db
 from .routers import post, user, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
+from .config import settings
 
 '''
+python -m venv .venv
+source .venv/bin/activate
 uvicorn app.main:app --reload
 pip install 'fastapi[standard]'
 pip install 'fastapi[all]'
