@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
-        users: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: say hi to santiago
         run: echo "Hola"
